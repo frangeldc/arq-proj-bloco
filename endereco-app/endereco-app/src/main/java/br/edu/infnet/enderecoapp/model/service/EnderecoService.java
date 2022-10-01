@@ -22,7 +22,7 @@ public class EnderecoService {
 		return enderecoClient.obterLista();
 	}
 
-	@CircuitBreaker(name = "cepService", fallbackMethod = "fallbackObeterPorCep")
+	@CircuitBreaker(name = "cepService", fallbackMethod = "fallbackObterPorCep")
 	public Endereco obterPorCep(String cep) {
 
 		Endereco endereco = enderecoClient.obterPorCep(cep);
